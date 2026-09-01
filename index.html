@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L.s Cleaning Service | Professional Cleaning in Valley Village, CA</title>
+  <style>
+    :root {
+      --primary: #0077b6;
+      --secondary: #00b4d8;
+      --dark: #1d3557;
+      --light: #f8f9fa;
+      --accent: #25d366;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { color: #333; line-height: 1.6; background-color: #fff; }
+    
+    /* Header & Navigation */
+    header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; max-width: 1200px; margin: auto; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 1.5rem; color: var(--dark); text-decoration: none; }
+    nav ul { display: flex; list-style: none; gap: 20px; }
+    nav a { text-decoration: none; color: var(--dark); font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: var(--primary); }
+
+    /* Hero Section */
+    .hero { 
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat; 
+      color: #fff; 
+      padding: 100px 5% 80px; 
+      text-align: center; 
+    }
+    .hero-content { max-width: 850px; margin: auto; }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+    .hero p { font-size: 1.2rem; margin-bottom: 25px; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+    
+    /* Content Block */
+    .hero-extra-text { 
+      font-size: 1rem; 
+      background: rgba(29, 53, 87, 0.8); 
+      padding: 18px 24px; 
+      border-radius: 8px; 
+      text-align: left; 
+      line-height: 1.6;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    section { padding: 60px 5%; max-width: 1200px; margin: auto; }
+    .section-title { text-align: center; font-size: 2.2rem; color: var(--dark); margin-bottom: 40px; }
+
+    /* Services Grid */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .service-card { border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s; }
+    .service-card:hover { transform: translateY(-5px); }
+    .service-card img { width: 100%; height: 190px; object-fit: cover; }
+    .service-card-body { padding: 18px; }
+    .service-card-body h3 { font-size: 1.2rem; color: var(--primary); margin-bottom: 8px; }
+    .service-card-body p { font-size: 0.9rem; color: #555; }
+
+    /* About Us */
+    .about-content { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+    .about-text { flex: 1; min-width: 300px; }
+    .about-image { flex: 1; min-width: 300px; }
+    .about-image img { width: 100%; border-radius: 8px; }
+
+    /* Keywords Section */
+    .keyword-section { background: var(--light); padding: 50px 5%; text-align: center; border-radius: 8px; margin-top: 40px; }
+    .keyword-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 25px; }
+    .keyword-item { background: #fff; padding: 10px 18px; border-radius: 20px; border: 1px solid var(--primary); color: var(--dark); font-weight: 600; font-size: 0.9rem; }
+
+    /* Reviews */
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .review-card { background: var(--light); padding: 22px; border-radius: 8px; border-left: 4px solid var(--primary); }
+    .stars { color: #f39c12; margin-bottom: 10px; }
+
+    /* Floating Buttons */
+    .floating-buttons { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 999; }
+    .float-btn { display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; color: #fff; text-decoration: none; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+    .btn-whatsapp { background: var(--accent); }
+    .btn-call { background: var(--primary); }
+
+    /* Footer */
+    footer { background: var(--dark); color: #fff; padding: 50px 5% 20px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; max-width: 1200px; margin: auto; }
+    .footer-col h4 { border-bottom: 2px solid var(--secondary); padding-bottom: 8px; margin-bottom: 15px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col a { color: #ccc; text-decoration: none; }
+    .footer-col a:hover { color: #fff; }
+    .copyright { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.85rem; color: #aaa; }
+
+    @media (max-width: 768px) {
+      .nav-container { flex-direction: column; gap: 15px; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#0077b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        L.s Cleaning Service
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Top-Notch Commercial & Residential Cleaning in Valley Village</h1>
+      <p>From pressure washing to deep window cleaning, we deliver spotless precision for every space.</p>
+      
+      <div class="hero-extra-text">
+        Welcome to L.s Cleaning Service, your trusted partner for immaculate spaces in Valley Village. We understand that a clean environment is essential for peace of mind, productivity, and health. Our dedicated team utilizes industry-leading techniques to ensure every corner shines. Experience targeted, spotless cleaning solutions today!
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>L.s. Cleaning Service offers top-notch commercial and residential cleaning in Valley Village, CA. From exterior window washing and gutter cleaning to oil and grease removal, our team handles all your needs with precision.</p>
+        <p style="margin-top: 10px;">We specialize in pressure washing, mirror and glass door cleaning, restroom sanitation, and post-construction cleanups. Whether you need regular maintenance or a deep clean, we provide flexible options like weekly, bi-weekly, or monthly services. Trust us to keep your space spotless—call now for a free estimate and experience the difference!</p>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80" alt="About L.s Cleaning Service">
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services">
+    <h2 class="section-title">Our Specialized Services</h2>
+    <div class="services-grid">
+      
+      <div class="service-card">
+        <img src="https://avatars.mds.yandex.net/i?id=af47a81cf21db2756730de2c4b181cdcca6cce3f-4210949-images-thumbs&n=13" alt="Commercial Cleaning">
+        <div class="service-card-body">
+          <h3>Commercial Cleaning</h3>
+          <p>Comprehensive, high-grade cleaning solutions tailored for offices, retail stores, and commercial buildings.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://avatars.mds.yandex.net/i?id=7c830c91efc53112f3bbb8bb6298de1cfe3d9801-4553435-images-thumbs&n=13" alt="Power & Pressure Washing">
+        <div class="service-card-body">
+          <h3>Power & Pressure Washing</h3>
+          <p>High-pressure washing equipment to blast away stubborn grime, dirt, build-ups, and exterior stains.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://avatars.mds.yandex.net/i?id=9cd2321b0c00b670f186ea20dd5c5efd9c0e5366-12635967-images-thumbs&n=13" alt="Exterior & Interior Window Washing">
+        <div class="service-card-body">
+          <h3>Exterior & Interior Window Washing</h3>
+          <p>Crystal-clear, streak-free glass treatment for both internal panes and exterior window surfaces.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://avatars.mds.yandex.net/i?id=21c515b76653e2a8af2befb449c9bfc91b61c2e3-12475925-images-thumbs&n=13" alt="Gutter Cleaning">
+        <div class="service-card-body">
+          <h3>Gutter Cleaning</h3>
+          <p>Removing leaves, sediment, and blockages to preserve optimal drainage and prevent structural leaks.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://avatars.mds.yandex.net/i?id=a2a7f226386a1d7c2b2e0f7757e7a313451986ff-5528343-images-thumbs&n=13" alt="Restroom Cleaning & Sanitation">
+        <div class="service-card-body">
+          <h3>Restroom Cleaning & Sanitation</h3>
+          <p>Deep disinfection, tile scrubbing, and complete odor elimination for hygienic restroom environments.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://avatars.mds.yandex.net/i?id=bfd76894537d19150dfb1db28bdd9be4c76cce8c-12995656-images-thumbs&n=13" alt="Post Construction Cleaning">
+        <div class="service-card-body">
+          <h3>Post Construction Cleaning</h3>
+          <p>Thorough removal of fine dust, debris, adhesive residue, and construction materials post-renovation.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://avatars.mds.yandex.net/i?id=6f07a567ae6f95ab3214f955046910d2ed08fee3-12473708-images-thumbs&n=13" alt="Oil & Grease Removal">
+        <div class="service-card-body">
+          <h3>Oil & Grease Removal</h3>
+          <p>Heavy-duty degreasing treatments designed for driveways, parking spaces, and industrial grounds.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://xn--25-hmct.xn--p1ai/wp-content/uploads/2025/11/image64300290109905452132312.jpg" alt="Mirror & Glass Door Cleaning">
+        <div class="service-card-body">
+          <h3>Mirror & Glass Door Cleaning</h3>
+          <p>Precision polishing for interior decorative mirrors, sliding glass doors, skylights, and partitions.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://avatars.mds.yandex.net/i?id=a484149365e5017216f89f487ec699b4d7917619-5226442-images-thumbs&n=13" alt="Carpet Cleaning & Vacuuming">
+        <div class="service-card-body">
+          <h3>Carpet Cleaning & Vacuuming</h3>
+          <p>Deep vacuuming and fiber extraction to remove trapped allergens, dirt, and stubborn carpet stains.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://avatars.mds.yandex.net/i?id=5f9dacc9b4100e344c2135003c6a4d2e93235fa2-9181338-images-thumbs&n=13" alt="Move In / Move Out Cleaning">
+        <div class="service-card-body">
+          <h3>Move In / Move Out Cleaning</h3>
+          <p>Turnkey, intensive property cleaning ensuring houses and apartments are move-in ready for tenants.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://www.basenio.de/file/uploadcache/0u9nR8RCH8/MAXx5472x3648/adobestock-246802218.jpeg" alt="Restaurant & Office Cleaning">
+        <div class="service-card-body">
+          <h3>Restaurant & Office Cleaning</h3>
+          <p>Health-compliant, meticulous cleaning solutions tailored for restaurants, dining spaces, and corporate offices.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://avatars.mds.yandex.net/i?id=1a294c4802e881d1142e4da0502ebddd03148c60-8312878-images-thumbs&n=13" alt="Recurring Maintenance">
+        <div class="service-card-body">
+          <h3>Recurring Maintenance</h3>
+          <p>Flexible schedules including Daily, Weekly, Bi-weekly, or Monthly recurring cleanup visits.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KEYWORD SECTION -->
+  <section class="keyword-section">
+    <h2 style="color: var(--dark); font-size: 1.8rem; margin-bottom: 10px;">Our Service Expertise</h2>
+    <p style="color: #666; max-width: 700px; margin: auto;">Detailed keywords and specialized capabilities across Valley Village, CA.</p>
+    <div class="keyword-grid">
+      <div class="keyword-item">Commercial Cleaning</div>
+      <div class="keyword-item">Residential Cleaning</div>
+      <div class="keyword-item">Power Washing</div>
+      <div class="keyword-item">Pressure Washing</div>
+      <div class="keyword-item">Exterior Window Washing</div>
+      <div class="keyword-item">Interior Window Washing</div>
+      <div class="keyword-item">Gutter Cleaning</div>
+      <div class="keyword-item">Mirror Cleaning</div>
+      <div class="keyword-item">Glass Door Cleaning</div>
+      <div class="keyword-item">Oil and Grease Removal</div>
+      <div class="keyword-item">Paint Removal</div>
+      <div class="keyword-item">Restroom Cleaning</div>
+      <div class="keyword-item">Window Awning Cleaning</div>
+      <div class="keyword-item">Skylight Cleaning</div>
+      <div class="keyword-item">Post Construction Cleaning</div>
+      <div class="keyword-item">Carpet Cleaning & Vacuuming</div>
+      <div class="keyword-item">Move In Cleaning</div>
+      <div class="keyword-item">Move Out Cleaning</div>
+      <div class="keyword-item">Restaurant Cleaning</div>
+      <div class="keyword-item">Office Cleaning</div>
+      <div class="keyword-item">Recurring Maintenance</div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"L.s Cleaning Service did a fantastic job with our office pressure washing and window cleaning. Extremely professional!"</p>
+        <h4 style="margin-top: 10px; color: var(--dark);">- Michael R.</h4>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"We use their bi-weekly apartment cleaning service. Always reliable, punctual, and meticulous."</p>
+        <h4 style="margin-top: 10px; color: var(--dark);">- Sarah L.</h4>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"The post-construction cleanup was a life-saver. They removed all dust and paint marks effortlessly."</p>
+        <h4 style="margin-top: 10px; color: var(--dark);">- David K.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/18188608082" class="float-btn btn-whatsapp" target="_blank" title="Chat on WhatsApp">💬</a>
+    <a href="tel:8188608082" class="float-btn btn-call" title="Call Now">📞</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Information</h4>
+        <p><strong>Address:</strong><br>4804 Laurel Canyon Blvd<br>Valley Village, CA 91607</p>
+        <p style="margin-top: 8px;"><strong>Phone:</strong> <a href="tel:8188608082">(818) 860-8082</a></p>
+        <p style="margin-top: 8px;"><strong>Email:</strong> <a href="mailto:lscleaningserv@yahoo.com">lscleaningserv@yahoo.com</a></p>
+        <p style="margin-top: 8px;"><a href="https://g.page/r/CQ_93Li_LE02EBM" target="_blank" style="color: var(--secondary);">View Google My Business Profile</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Working Hours</h4>
+        <p><strong>Sun - Thu:</strong><br>1 AM – 6 PM</p>
+        <p style="margin-top: 8px;"><strong>Fri - Sat:</strong><br>Open 24 Hours</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Google Map Location</h4>
+        <iframe src="https://maps.google.com/maps?q=4804%20Laurel%20Canyon%20Blvd%20Valley%20Village,%20CA%2091607&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="150" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 The Ranking Geeks. All Rights Reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
